@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header id="top">
         <nav>
             <img class="ina" src="Black Gold Vintage Luxury Jewelry Logo.png">
             <ul>
@@ -263,19 +263,19 @@
         window.addEventListener('scroll', handleScroll);
     });
 </script>
-<!-- Button to Go to Hero Section -->
-<button class="scroll-btn" id="scrollToHero">Go to Hero</button>
-
-<!-- Button to Go to Footer Section -->
-<button class="scroll-btn" id="scrollToFooter">Go to Footer</button>
+<!-- Go to Header Button -->
+<a href="#top" class="go-to-header">
+    <img src="—Pngtree—gold arrow up_14602777.png" alt="Go to Top">
+</a>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('scrollToHero').addEventListener('click', () => {
-        document.getElementById('h').scrollIntoView({ behavior: 'smooth' });
-    });
+    window.onscroll = function() {
+    var goToHeaderBtn = document.querySelector('.go-to-header');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        goToHeaderBtn.style.display = "block";
+    } else {
+        goToHeaderBtn.style.display = "none";
+    }
+};
 
-    document.getElementById('scrollToFooter').addEventListener('click', () => {
-        document.querySelector('footer').scrollIntoView({ behavior: 'smooth' });
-    });
-});
 </script>
+

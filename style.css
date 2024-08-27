@@ -39,17 +39,18 @@ header nav ul li a {
     color: rgb(240, 236, 227);
     line-height: 60px;
     text-decoration: none;
+    margin-right: 30px;
     font-weight: bold;
     display: inline-block; /* Inline-block to shrink wrap around the text */
     padding: 10px 15px; /* Add some padding for better aesthetics */
     transition: transform 0.3s ease, font-size 0.3s ease, background-color 0.3s ease;
-    border-radius: 20px; /* To make the background rounded */
+   
 }
 
 /* Hover effect */
 header nav ul li a:hover {
     color: rgb(241, 170, 37); /* Change text color on hover */
-    background-color: black; /* Black background only around the text */
+
     font-size: 18px; /* Increase font size of the text */
     border-radius: 20px; /* Ensures the background is rounded */
 }
@@ -403,21 +404,28 @@ html {
     opacity: 1;
     transform: translateY(0); /* Move to original position */
 }
-.scroll-btn {
+/* Go to Header Button */
+.go-to-header {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #000; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1000; /* Ensure the button is on top of other elements */
+    background-color: #000; /* Background color */
+    border-radius: 50%; /* Make it round */
+    padding: 10px; /* Add some padding */
+    text-align: center; 
+    z-index: 1000; /* Ensure it appears above other elements */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 
-.scroll-btn:hover {
-    background-color: #555; /* Button hover color */
+.go-to-header img {
+    width: 30px; /* Size of the arrow */
+    height: 30px;
 }
+
+.go-to-header:hover {
+    background-color: #555; /* Change background color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
 
 
